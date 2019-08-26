@@ -1,16 +1,34 @@
-document.querySelector('#btnCalcular').addEventListener('click', () => {
+function restarHoras() {
 
-    let horaE = document.getElementById('horaE').value
-    let minutosE = document.getElementById('minutoE').value
-    let segundosE = document.getElementById('segundoE').value
-
-    let horaS = document.getElementById('horaS').value
-    let minutosS = document.getElementById('minutoS').value
-    let segundosS = document.getElementById('segundoS').value
-
-    let texto = document.getElementById('resultado')
-  
-     
-        texto.innerHTML = `Hay una diferencia de ${(horaE - horaS) } de horas con ${minutosE - minutosS} y segundos: ${segundosE - segundosS}`
+    inicio = document.getElementById("inicio").value;
+    fin = document.getElementById("fin").value;
     
-});
+    inicioMinutos = parseInt(inicio.substr(3,2));
+    inicioHoras = parseInt(inicio.substr(0,2));
+    
+    finMinutos = parseInt(fin.substr(3,2));
+    finHoras = parseInt(fin.substr(0,2));
+  
+    transcurridoMinutos = finMinutos - inicioMinutos;
+    transcurridoHoras = finHoras - inicioHoras;
+    
+    if (transcurridoMinutos < 0) {
+      transcurridoHoras--;
+      transcurridoMinutos = 60 + transcurridoMinutos;
+    }
+    
+    horas = transcurridoHoras.toString();
+    minutos = transcurridoMinutos.toString();
+    
+    if (horas.length < 2) {
+      horas = "0"+horas;
+    }
+    
+    if (horas.length < 2) {
+      horas = "0"+horas;
+    }
+    
+    document.getElementById("resta").value = horas+":"+minutos;
+  
+  }
+  
