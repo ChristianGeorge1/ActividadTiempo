@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabajadores</title>
+</head>
+<body>
+    <h1>Trabajadores</h1>
+    <p>Por favor colocar dentro de los campos la hora en la que llegan y la hora en la que salen.</p>
+    <div>
+        <h3>Hora de entrada</h3>
+        <form action="">
+            <label for="horasE">Horas: </label>
+            <input type="number" id="horaE" placeholder="2" min="1" max="24">
+            
+            <label for="minutosE">Minutos: </label>
+            <input type="number" id="minutoE" placeholder="45" min="1" max="59" tipcker>
+
+            <label for="segundosE">Segundos: </label>
+            <input type="number" id="segundoE" placeholder="15" min="1" max="59">
+        </form>
+    </div>
+
+
+    <div>
+        <h3>Hora de salida</h3>
+        <form action="">
+            <label for="horasS">Horas: </label>
+            <input type="number" id="horaS" placeholder="6" min="1" max="24">
+
+            <label for="minutosS">Minutos: </label>
+            <input type="number" id="minutoS" placeholder="4" min="1" max="59">
+
+            <label for="segundosS">Segundos: </label>
+            <input type="number" id="segundoS" placeholder="25" min="1" max="59">
+        </form>
+    </div>
+    <br>
+    <button type="button" id="btnCalcular">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script src="main.js"></script>
+</body>
+</html>
