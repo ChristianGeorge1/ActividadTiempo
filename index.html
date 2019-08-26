@@ -9,15 +9,23 @@
 </head>
 
 <body>
+    <div style="text-align: center;">
+        <h1>Ingresar los tiempos correspondientes</h1>
+        <p><strong>Es importante mencionar que para separar tienes que poner los ":"</strong></p>
 
-    <div style="width: 350px;">
-        <p>Hora inicio (hh:mm): <input type="text" id="inicio" value="" /></p>
-        <p>Hora fin (hh:mm):<input type="text" id="fin" value="" /></p>
-        <p><input type="button" onclick="restarHoras();" value="Restar horas"></p>
+        <label>Hora inicio (hh:mm): </label>
+        <input type="text" id="inicio" value="" />
+
+        <label>Hora fin (hh:mm): </label>
+        <input type="text" id="fin" value="" />
+
+
+        <input type="button" onclick="restarHoras();" value="Restar horas">
         <p>&nbsp;</p>
-        <p>Tiempo transcurrido: <input type="text" id="resta" value="" /></p>
+        <p>Tiempo transcurrido: </p>
+        <input type="text" id="resta" value="" disabled />
     </div>
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
